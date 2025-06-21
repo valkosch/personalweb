@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+#flex {
+    margin-top: 5px;
+    display: flex;
+}
+
+#main {
+    display: flex;
+    color: white;
+    padding: 15px;
+    background-color: black;
+}
+
+#left_main {
+    width: 80%;
+    margin-right: 300px;
+}
+#middle_main {
+    width: 30%;
+}
+
+#saddam {
+    margin-top: 50px;
+}
+#guy {
+    margin-top: 100px;
+    float: right;
+    margin-bottom: -5px;
+}
+#dino {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+a {
+    color: red;
+}
+.blurred{
+    filter: blur(8px); /* Apply blur effect */
+    transition: filter 0.3s ease-in-out;
+}
+.blurred:hover{
+    filter: blur(0);
+}
+#footer{
+    font-family: sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-style: italic;
+    text-align: center;
+
+}
