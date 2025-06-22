@@ -150,6 +150,13 @@ $(function(){
             ].join('\n');
             this.echo(credits, {raw: true});
             
+        },
+        free: function(){
+            term.echo('');
+            this.echo($(
+                '<a href="/images/loser.gif"><img src="images/88x31/Jesus-free-ps2.gif" alt="" width="150"></a>'
+            ))
+            term.echo('');
         }
 
     };
