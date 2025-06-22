@@ -32,7 +32,7 @@ $(function(){
             '[[;#fff;]hard skills]',
             [
                 'Computer networks, Cisco Devices',
-                'Virtualization, Containeriztion',
+                'Virtualization, Containerization',
                 'Penetration Testing',
                 'Malware Analysis - high level',
             ].map(lib => `* [[;#0f0;]${lib}]`),
