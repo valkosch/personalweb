@@ -51,6 +51,7 @@ $(function(){
         projects: [
             '',
             '[[;#fff;]Latest pet projects]',
+            `* [[!;;;;#]]Built my personal website, learned REST API, and OAuth2 flow`,
             `* [[!;;;;#]Built my own homelab]`,
             `* [[!;;;;#]DHT network sniffer and torrent tracker scraper]`,
             `* [[!;;;;#]Computer graphics, built a raytracer]`,

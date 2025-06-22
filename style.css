@@ -1,13 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
     background-image: url("images/background1.jpg");
     background-color: #5623AA;
     font-family: msdos;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .container {
     width: 90%;
@@ -18,6 +14,7 @@ body {
     gap: 20px;
     /*background: rgba(0, 0, 0, 0.6);
     border-radius: 12px;*/
+    margin: auto;
     padding: 20px;
 }
 #terminal {
@@ -101,4 +98,13 @@ body {
 .command{
     cursor: pointer;
     color: white;
+}
+#footer{
+    font-family: sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-style: italic;
+    text-align: center;
+
 }
