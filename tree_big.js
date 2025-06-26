@@ -1,8 +1,8 @@
 var myCanvas = document.getElementById("my_canvas");
 var ctx = myCanvas.getContext("2d");
 var rnd_rot = 3 + Math.floor(Math.random() * 20);
-var rnd_len = 80;
-var rnd_width = 4 + Math.floor(Math.random() * 6);
+var rnd_len = 20;
+var rnd_width = 1 + Math.floor(Math.random() * 3);
 function drawTree(startX, startY, len, angle, branchWidth) {
     ctx.lineWidth = branchWidth;
 
@@ -23,7 +23,7 @@ function drawTree(startX, startY, len, angle, branchWidth) {
     ctx.stroke();
 
 
-    if(len < 6) {
+    if(len < 2) {
         ctx.restore();
         return;
     }
@@ -32,4 +32,4 @@ function drawTree(startX, startY, len, angle, branchWidth) {
     drawTree(0, -len, len*0.8, angle+rnd_rot, branchWidth*0.8);
     ctx.restore();
 }
-drawTree(300, 400, rnd_len, 0, rnd_width)
+drawTree(100, 100, rnd_len, 0, rnd_width)
