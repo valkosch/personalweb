@@ -68,17 +68,17 @@
       "How do you know I'm not running a crypto miner on your laptop right now?",
       "Touch grass",
       "Kukkkkkorikkkkkkuuuu",
-      "Did you tried Alt+F4 to load this page faster?",
+      "Have you tried Alt+F4 to load this page faster?",
       "So you want to message me huh?",
       "Eating seeds as a pastime activity",
-      "This website has no right to be this bad"
+      "This website has no right to be this cool"
     ];
 
-    let currentTip = 0;
+    let currentTip = Math.floor(Math.random() * tips.length);
 
     function updateTip() {
       tipBox.textContent = tips[currentTip];
-      currentTip = (currentTip + 1) % tips.length;
+      currentTip = Math.floor(Math.random() * tips.length);
     }
 
     updateTip(); // Initial tip

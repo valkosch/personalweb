@@ -3,28 +3,36 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
     <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/figlet/lib/figlet.js"></script>
     <script src="terminal.js"></script>
-    <script src="currentlyplaying.js"></script>
+    <!-- <script src="currentlyplaying.js"></script> -->
     <link rel="stylesheet" href="style.css">
     <title>Mi websitio</title>
 </head>
 <body>
     <main class="container">
         <div id="terminal"></div>
-        <aside class="now-playing">
+        <div class="now-playing">
             <img alt="coverart" id="cover"/>
-	    <div>
-		<p style="color: rgba(0,255,0,255);">At the moment, I'm listening to:</p>
-            	<p id="nowplaying">I'm listening to the silence right now :((, come back later!</p>
-	    </div>
-        </aside>
+            <div>
+                <p style="color: rgba(0,255,0,255);">At the moment, I'm listening to:</p>
+                <p id="nowplaying">I'm listening to the silence right now :((, come back later!</p>
+            </div>
+        </div>
+        <section id="recent-posts" class="pwned recent">
+          <p style="color: rgba(0,255,0,255);">Recent posts</p>
+          <div id="posts-container" style="display: flex; flex-direction: column; gap: 15px;"></div>
+        </section>
         <div style="display: flex; gap: 20px">
-            <div id="pwned">
+            <div class="pwned">
                 <p style="color: rgba(0,255,0,255);">Pwned machines</p>
                 <div style="display: flex; justify-content: space-between;">
                     <a href="https://blog.v41k0.xyz/HTB-writeups/active"><img src="images/trolls.png"></a>
@@ -32,16 +40,13 @@
                     <a href="https://blog.v41k0.xyz/HTB-writeups/titanic"><img src="images/trolls.png"></a>
                 </div>
             </div>
-            <div id="pwned">
+            <div class="pwned">
                 <p style="color: rgba(0,255,0,255);">Random</p>
                 <ul>
                     <li><a href=Google.html>Poggle</a></li>
                     <li><a href=socials.html>my socials</a></li>
                 </ul>
             </div>
-        </div>
-        <div style="visibility: hidden;">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem libero excepturi sunt dignissimos. Totam quidem aliquam explicabo sapiente fugiat, iste quos possimus excepturi autem maiores repellat rerum accusantium deserunt odio!</p>
         </div>
     </main>
     <canvas id="my_canvas" width="300" height="200"></canvas>
@@ -67,5 +72,6 @@
         <p >Made by valko. All rights reserved Since 10.000BC - End of time</p>
     </footer>
 </body>
+<script src="recentposts.js"></script>
 <script src="tree_small.js"></script>
 </html>
