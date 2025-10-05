@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asymptotic Loading Bar</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #121212;
+      color: white;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 600px;
+      height: 30px;
+      border: 2px solid #555;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(to right, #00ff88, #00bbaa);
+      transition: width 0.1s linear;
+    }
+
+    .percentage {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Loading...</h1>
+  <div class="container">
+    <div class="bar" id="loadingBar"></div>
+  </div>
+    <div id="tipBox" style="margin-top: 10px; color: red; font-size: 1.2rem"></div>
+  <script>
+    const bar = document.getElementById('loadingBar');
+
+    let progress = 1000; // [0, 100)
+
+    function updateProgress() {
+      progress++;
+      const delta = 1 - 1000/progress; 
+
+      bar.style.width = delta * 99 + '%';
+
+      requestAnimationFrame(updateProgress);
+    }
+
+    updateProgress();
+
+    const tips = [
+      "I woke up sucking a lemon",
+      "Keep going, almost there!",
+      "Asymptotic convergence is like a chocolate bar for a donkey",
+      "How do you know I'm not running a crypto miner on your laptop right now?",
+      "Touch grass",
+      "Kukkkkkorikkkkkkuuuu",
+      "Have you tried Alt+F4 to load this page faster?",
+      "So you want to message me huh?",
+      "Eating seeds as a pastime activity",
+      "This website has no right to be this cool",
+      "These snails are so delicious",
+      "Charlie Oscar Oscar Lima"
+    ];
+
+    let currentTip = Math.floor(Math.random() * tips.length);
+
+    function updateTip() {
+      tipBox.textContent = tips[currentTip];
+      currentTip = Math.floor(Math.random() * tips.length);
+    }
+
+    updateTip(); // Initial tip
+    setInterval(updateTip, 10000);
+  </script>
+
+</body>
+</html>
+

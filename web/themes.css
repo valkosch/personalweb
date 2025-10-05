@@ -1,0 +1,15 @@
+.purple{
+    --bg-color:  #5623AA;
+    --bg-image: url("images/background1.jpg");
+    --bt-color: #FFFFFF;
+}
+.light{
+    --bg-color:  #FFFFFF;
+    --bg-image: url("images/background3.1.jpg");
+    --bt-color:#505050;
+}
+.brutal{
+    --bg-color:  #505050;
+    --bg-image: url("images/background4.jpg");
+    --bt-color: #5623AA;
+}

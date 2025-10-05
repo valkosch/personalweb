@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/figlet/lib/figlet.js"></script>
+    <script src="terminal.js"></script>
+    <script src="currentlyplaying.js"></script>
+    <script src="theme_button.js"></script>
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="images/background1.jpg">
+    <link rel="preload" as="image" href="images/background3.1.jpg">
+    <link rel="preload" as="image" href="images/background4.jpg">
+    <title>Mi websitio</title>
+</head>
+<body>
+
+    <main class="container">
+        <div id="terminal"></div>
+        <div class="now-playing">
+            <img alt="coverart" id="cover"/>
+            <div>
+                <p style="color: rgba(0,255,0,255);">At the moment, I'm listening to:</p>
+                <p id="nowplaying">I'm listening to the silence right now :((, come back later!</p>
+            </div>
+        </div>
+        <section id="recent-posts" class="pwned recent">
+          <p style="color: rgba(0,255,0,255);">Recent posts</p>
+          <div id="posts-container" style="display: flex; flex-direction: column; gap: 15px;"></div>
+          <a href="https://blog.v41k0.xyz/blog/rss.xml" class="link-hover-rss">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
+                  <path d="M4 11a9 9 0 0 1 9 9"></path>
+                  <path d="M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1"></circle>
+              </svg>
+              subscribe to my RSS feed</a>
+        </section>
+
+        <div class="pwned">
+            <p style="color: rgba(0,255,0,255); font-style:italic;">Ptsssss! hey son, do you want some privacy? </p>
+            <p>Public cryptography is so cool! My public key is right <a href="publickey.valkosch@proton.me-90f51221c26c62d44a062f34d1529f067d997a98.asc">here</a>, encrypt your message with it, and send it to <span style="font-weight: bold; color:red;">valkosch[at]proton.me</span>, then we can share our secrets</p>
+        </div>
+        <div style="display: flex; gap: 20px">
+            <div class="pwned">
+                <p style="color: rgba(0,255,0,255);">Pwned machines</p>
+                <div style="display: flex; justify-content: space-between;">
+                    <a href="https://blog.v41k0.xyz/HTB-writeups/active"><img src="images/trolls.png"></a>
+                    <a href="https://blog.v41k0.xyz/HTB-writeups/blue"><img src="images/trolls.png"></a>
+                    <a href="https://blog.v41k0.xyz/HTB-writeups/titanic"><img src="images/trolls.png"></a>
+                </div>
+            </div>
+            <div class="pwned">
+                <p style="color: rgba(0,255,0,255);">Random</p>
+                <ul>
+                    <li><a href=Google.html>Poggle</a></li>
+                    <li><a href=socials.html>my socials</a></li>
+                    <li><a href=https://nedrogozz.hu>nedrogozz</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <button onclick="changeTheme()" class="floating-btn"></button>
+    <canvas id="my_canvas" width="300" height="200"></canvas>
+    <footer id="footer">
+        <p>
+            <a href="https://landchad.net/"><img src="images/88x31/landchad.gif" alt=""></a>
+            <a href=""><img src="images/88x31/88x31-your-ad.gif" alt=""></a>
+            <a href=""><img src="images/88x31/by_cyber-rot_on_neocities.png" alt=""></a>
+            <a href=""><img src="images/88x31/dos.gif" alt=""></a>
+            <a href=""><img src="images/88x31/drmario.gif" alt=""></a>
+            <a href=""><img src="images/88x31/f_ckfb.gif" alt=""></a>
+            <a href=""><img src="images/88x31/f_ckingwww.gif" alt=""></a>
+            <a href=""><img src="images/88x31/free-sex.gif" alt=""></a>
+            <a href=""><img src="images/88x31/gnu-linux.gif" alt=""></a>
+            <a href=""><img src="images/88x31/google_stand.gif" alt=""></a>
+            <a href=""><img src="images/88x31/linuxnow2.gif" alt=""></a>
+            <a href=""><img src="images/88x31/proxmox.gif" alt=""></a>
+            <a href=""><img src="images/88x31/say-no-to-web3.gif" alt=""></a>
+            <a href=""><img src="images/88x31/vim.vialle.love.anim.gif" alt=""></a>
+            <img id="saddam" src="images/saddam.jpg" width=100 height=50>
+        </p>
+
+        <p >Made by valko. All rights reserved Since 10.000BC - End of time</p>
+    </footer>
+</body>
+<script src="recentposts.js"></script>
+<script src="tree_small.js"></script>
+</html>
