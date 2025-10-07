@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: personal-webapp-deployment
+  labels: 
+    app: personal-webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: personal-webapp
+  template:
+    metadata:
+      labels:
+        app: personal-webapp
+    spec:
+      containers:
+        - name: personal-webapp
+          image: nginx:1.14.2
+          ports:
+            - containerPort: 80

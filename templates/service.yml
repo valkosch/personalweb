@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: personal-webapp-service
+spec:
+  selector:
+    app: personal-webapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP

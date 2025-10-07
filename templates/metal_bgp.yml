@@ -1,0 +1,24 @@
+apiVersion: metallb.io/v1beta1
+kind: BGPPeer
+metadata:
+  name: peer-to-openwrt
+  namespace: metallb-system
+spec:
+  myASN: 65002
+  peerASN: 65001
+  peerAddress: 10.50.50.1   # OpenWrt router
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: bgp-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 10.90.90.5-10.90.90.230
+---
+apiVersion: metallb.io/v1beta1
+kind: BGPAdvertisement
+metadata:
+  name: bgp-adv
+  namespace: metallb-system
