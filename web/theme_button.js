@@ -1,4 +1,4 @@
-var themes = ["purple", "light", "brutal", "gal1", "gal2", "gal3"]
+var themes = ["purple", "light", "brutal", "gal1", "gal2"]
 var currentIndex = 0
 
 function applyTheme(index){
