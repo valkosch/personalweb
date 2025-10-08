@@ -1,3 +1,4 @@
-ingressRoute:
-  dashboard:
-    enabled: true
+service:
+  type: LoadBalancer
+  spec:
+    loadBalancerIP: 10.90.90.5
