@@ -26,8 +26,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.HARBOR_URL }}/${{ secrets.HARBOR_PROJECT }}/my-app:latest
-            ${{ secrets.HARBOR_URL }}/${{ secrets.HARBOR_PROJECT }}/my-app:${{ github.sha }}
+            ${{ secrets.HARBOR_URL }}/${{ secrets.HARBOR_PROJECT }}/valko-webapp:latest
+            ${{ secrets.HARBOR_URL }}/${{ secrets.HARBOR_PROJECT }}/valko-webapp:${{ github.sha }}
 
       - name: Logout
         if: always()
