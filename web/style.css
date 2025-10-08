@@ -1,16 +1,20 @@
+html{
+    min-height: 100%;
+    background-image: var(--bg-image);
+    background-color: var(--bg-color);
+
+}
 body {
     margin: 0;
     padding: 0;
-    background-image: var(--bg-image);
-    background-color: var(--bg-color);
     font-family: msdos;
 }
 .floating-btn {
       position: fixed;
       width: 40px;
       height: 40px;
-      top: 20px;
-      right: 20px;
+      top: 10px;
+      left: 10px;
       padding: 10px 20px;
       background-color: var(--bt-color);
       border: none;
@@ -25,6 +29,7 @@ body {
   background-color: color-mix(in srgb, var(--bt-color) 70%, black 30%);
 }
 .container {
+    margin-top: 50px;
     width: 90%;
     max-width: 1000px;
     display: flex;
@@ -172,3 +177,52 @@ a.link-hover-rss:hover{
     text-align: center;
 
 }
+
+
+.top-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1e40af;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between; /* space between text+img and close button */
+  align-items: center;
+  font-family: msdos;
+  font-size: 16px;
+  z-index: 1001;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between text and image */
+}
+
+.content p {
+  margin: 0;
+}
+
+.close-btn {
+  margin-right: 40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
+.top-bar.closed {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+

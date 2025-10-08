@@ -1,15 +1,68 @@
-.purple{
-    --bg-color:  #5623AA;
+:root {
+    --bg-color: #fff;
+    --bg-image: none;
+    --bt-color: #000;
+}
+
+/* Base setup */
+body {
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    color: var(--bt-color);
+    background-position: center;
+}
+
+/* ===== THEMES ===== */
+
+/* Repeating background themes */
+.purple {
+    --bg-color: #5623AA;
     --bg-image: url("images/background1.jpg");
     --bt-color: #FFFFFF;
+
+    background-repeat: repeat;
+    background-size: auto;
 }
-.light{
-    --bg-color:  #FFFFFF;
+
+.light {
+    --bg-color: #FFFFFF;
     --bg-image: url("images/background3.1.jpg");
-    --bt-color:#505050;
+    --bt-color: #505050;
+
+    background-repeat: repeat;
+    background-size: auto;
 }
-.brutal{
-    --bg-color:  #505050;
+
+.brutal {
+    --bg-color: #505050;
     --bg-image: url("images/background4.jpg");
     --bt-color: #5623AA;
+
+    background-repeat: repeat;
+    background-size: auto;
 }
+
+.gal1, .gal2, .gal3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gal1 {
+    --bg-color: #FFFFFF;
+    --bg-image: url("images/gal1.jpg");
+    --bt-color: #000000;
+}
+
+.gal2 {
+    --bg-color: #FFFFFF;
+    --bg-image: url("images/gal2.jpg");
+    --bt-color: #000000;
+}
+
+.gal3 {
+    --bg-color: #FFFFFF;
+    --bg-image: url("images/gal3.jpg");
+    --bt-color: #000000;
+}
+

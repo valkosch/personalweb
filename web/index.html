@@ -20,10 +20,20 @@
     <link rel="preload" as="image" href="images/background1.jpg">
     <link rel="preload" as="image" href="images/background3.1.jpg">
     <link rel="preload" as="image" href="images/background4.jpg">
+    <link rel="preload" as="image" href="images/gal1.jpg">
+    <link rel="preload" as="image" href="images/gal2.jpg">
+    <link rel="preload" as="image" href="images/gal3.jpg">
     <title>Mi websitio</title>
 </head>
 <body>
-
+    <button onclick="changeTheme()" class="floating-btn"></button>
+    <div class="top-bar" id="notification-bar">
+      <div class="content">
+        <p>Now deployed with <i>κυβερνήτης, kubernḗtēs</i> :DD</p>
+        <img alt="k8s" width="25" height="25" src="images/k8s.svg" />
+      </div>
+      <button class="close-btn" id="close-bar">&times;</button>
+    </div>
     <main class="container">
         <div id="terminal"></div>
         <div class="now-playing">
@@ -68,7 +78,6 @@
             </div>
         </div>
     </main>
-    <button onclick="changeTheme()" class="floating-btn"></button>
     <canvas id="my_canvas" width="300" height="200"></canvas>
     <footer id="footer">
         <p>
@@ -94,4 +103,5 @@
 </body>
 <script src="recentposts.js"></script>
 <script src="tree_small.js"></script>
+<script src="top_bar.js"></script>
 </html>
