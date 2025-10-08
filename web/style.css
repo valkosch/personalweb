@@ -15,6 +15,7 @@ body {
       height: 40px;
       top: 10px;
       left: 10px;
+      z-index: 999;
       padding: 10px 20px;
       background-color: var(--bt-color);
       border: none;
@@ -24,7 +25,6 @@ body {
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       transition: background-color 0.2s ease;
 }
-
 .floating-btn:hover {
   background-color: color-mix(in srgb, var(--bt-color) 70%, black 30%);
 }
