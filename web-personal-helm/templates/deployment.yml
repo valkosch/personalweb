@@ -17,6 +17,8 @@ spec:
     spec:
       containers:
         - name: personal-webapp
-          image: nginx:1.14.2
+          image: harbor.sch.bme.hu/personal-valentin/valko-webapp:latest
           ports:
             - containerPort: 80
+      imagePullSecrets:
+        - name: harbor-registry
