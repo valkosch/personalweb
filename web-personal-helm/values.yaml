@@ -1,2 +1,2 @@
 namespace: v41k0-prod
-replicas: 3
+replicas: 1

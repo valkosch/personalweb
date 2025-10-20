@@ -32,15 +32,17 @@ $(function(){
             '[[;#fff;]hard skills]',
             [
                 'Computer networks, Cisco Devices',
-                'Virtualization, Containerization',
+                'Virtualization, Containerization, DevOps',
                 'Penetration Testing',
                 'Malware Analysis - high level',
+                'Industrial Control System security'
             ].map(lib => `* [[;#0f0;]${lib}]`),
             '',
             '[[;#fff;]tools]',
             [
                 'Proxmox',
                 'Docker',
+                'Kubernetes',
                 'Wazuh',
                 'Metasploit',
                 'git',
@@ -53,6 +55,7 @@ $(function(){
             '[[;#fff;]Latest pet projects]',
             `* [[!;;;;#]]Built my personal website, learned REST API, and OAuth2 flow`,
             `* [[!;;;;#]Built my own homelab]`,
+            `* [[!;;;;#]Buit my own k8s cluster]`,
             `* [[!;;;;#]DHT network sniffer and torrent tracker scraper]`,
             `* [[!;;;;#]Computer graphics, built a raytracer]`,
             `* [[!;;;;#]CCTV network vulnerability, and RTSP fuzzing]`,
