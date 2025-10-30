@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: personal-webapp
-          image: harbor.sch.bme.hu/personal-valentin/valko-webapp@sha256:latest
+          image: harbor.sch.bme.hu/personal-valentin/valko-webapp@sha256:bced44d31697b82ab6c78e1be002d415f6a6eec83052628726182841a680bcb3
           ports:
             - containerPort: 80
           resources:
