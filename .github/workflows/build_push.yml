@@ -37,7 +37,7 @@ jobs:
 
       - name: Update Helm Chart
         env:
-          NEW_VERSION: steps.get_version.outputs.VERSION
+          NEW_VERSION: ${{ steps.get_version.outputs.VERSION }}
           HELM_REPO_PAT: ${{ secrets.HELM_REPO_PAT }}
           HELM_REPO_URL: github.com/valkosch/helm-charts
           VALUES_FILE_PATH: ./personal-helm/values.yaml
