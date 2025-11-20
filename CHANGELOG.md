@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/valkosch/personalweb/compare/v1.0.3...v1.0.4) (2025-11-20)
+
+
+### Bug Fixes
+
+* test ([e64a2fa](https://github.com/valkosch/personalweb/commit/e64a2fad4d4602cd9dbe17ab20c28855ac5be47d))
+
 ## [1.0.3](https://github.com/valkosch/personalweb/compare/v1.0.2...v1.0.3) (2025-11-20)
 
 
