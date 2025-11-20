@@ -17,7 +17,15 @@ jobs:
       - name: Log in to Harbor
         run: |
           echo "${{ secrets.HARBOR_PASSWORD }}" | docker login ${{ secrets.HARBOR_URL }} -u ${{ secrets.HARBOR_USERNAME }} --password-stdin
-
+      
+      - name: Get Clean Version
+        id: get_version
+        run: |
+          TAG=${{ github.ref_name }}
+          VERSION=${TAG#v}
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Extracted clean version: $VERSION"
+          
       - name: Build and push App
         uses: docker/build-push-action@v5
         with:
@@ -25,11 +33,11 @@ jobs:
           push: true
           tags: |
             ${{ secrets.HARBOR_URL }}/${{ secrets.HARBOR_PROJECT }}/valko-webapp:latest
-            ${{ secrets.HARBOR_URL }}/${{ secrets.HARBOR_PROJECT }}/valko-webapp:${{ github.ref_name }}
+            ${{ secrets.HARBOR_URL }}/${{ secrets.HARBOR_PROJECT }}/valko-webapp:${{ steps.get_version.outputs.VERSION }}
 
       - name: Update Helm Chart
         env:
-          NEW_VERSION: ${{ github.ref_name }} # Uses the tag directly
+          NEW_VERSION: steps.get_version.outputs.VERSION
           HELM_REPO_PAT: ${{ secrets.HELM_REPO_PAT }}
           HELM_REPO_URL: github.com/valkosch/helm-charts
           VALUES_FILE_PATH: ./personal-helm/values.yaml
@@ -39,9 +47,6 @@ jobs:
           
           git config user.name "Semantic Release Bot"
           git config user.email "bot@example.com"
-          
-          # Strip the 'v' from the tag if your Helm chart expects pure numbers (optional)
-          # CLEAN_VERSION="${NEW_VERSION#v}"
           
           sed -i "s/tag: .*/tag: \"$NEW_VERSION\"/" $VALUES_FILE_PATH
           
