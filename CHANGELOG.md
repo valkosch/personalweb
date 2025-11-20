@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/valkosch/personalweb/compare/v1.0.1...v1.0.2) (2025-11-20)
+
+
+### Bug Fixes
+
+* just testing new clean versioning ([c3f250e](https://github.com/valkosch/personalweb/commit/c3f250e40aafb1648c2f2f5f9cca29f4c1b0f447))
+
 ## [1.0.1](https://github.com/valkosch/personalweb/compare/v1.0.0...v1.0.1) (2025-11-20)
 
 
